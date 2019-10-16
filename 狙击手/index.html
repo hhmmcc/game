@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>飞机大作战</title>
+		<script type="text/javascript" src="./Game.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./GameView.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./Map.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./Npc.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./Bullet.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./Enemy.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./EnemyBullet.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="./Bomb.js" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="app"></div> 
+	</body>
+	<script type="text/javascript">
+		let game = new Game(480, 700);
+			game.start();
+		document.onkeypress = function(e){
+			let keyCode = e.keyCode;
+			game.onkeypress(keyCode);
+		}
+	</script>
+</html>
